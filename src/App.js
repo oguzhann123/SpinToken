@@ -1,5 +1,5 @@
 import './App.css';
-let currentRotation = 0;
+
 // Spin wheel function
 const spinWheel = () => {
   alert("Coming Soon! This feature is currently disabled.");
