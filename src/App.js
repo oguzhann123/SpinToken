@@ -161,6 +161,12 @@ Don’t just watch the future happen. Be part of it. Let’s make SpinCoin a nam
   </div>
 </div>
 
+<div class="announcement-bar">
+  <div class="scroll-text">
+  🍀 value is 1000 USD! Are you lucky? We’ll see! Let’s grow together and add new games! Coming Soon
+  </div>
+ 
+</div>
 
 
 
