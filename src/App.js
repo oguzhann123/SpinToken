@@ -150,10 +150,10 @@ Don’t just watch the future happen. Be part of it. Let’s make SpinCoin a nam
     <p><b>Rewards:</b> Engaging community rewards are in the pipeline, designed to incentivize long-term participation and loyalty.</p>
     <p><b>Contract Address:</b></p>
     <div className="contract-address-container">
-      <span id="contractAddress">0x12..</span>
+      <span id="contractAddress">3oW..</span>
       <button 
         className="copy-button" 
-        onClick={() => navigator.clipboard.writeText('0x1234567890abcdef1234567890abcdef12345678')}
+        onClick={() => navigator.clipboard.writeText('3oW237FZF4RMcU1VqvVXCWdZVjDmwM8PFAgRdDPBpump')}
       >
         Copy
       </button>
