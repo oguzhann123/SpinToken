@@ -435,44 +435,96 @@ body {
 
 
 
+/* Modal arka plan */
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1000; 
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); 
-}
-
-.modal {
-  display: none; 
+  display: none;
   position: fixed;
-  z-index: 1000; 
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); 
+  background-color: rgba(0, 0, 0, 0.9); /* Daha koyu bir arka plan */
+  overflow: auto; /* Uzun içerik için kaydırma */
 }
 
 /* Modal içeriği */
 .modal-content {
-  background: linear-gradient(135deg, #FF5F6D, #FFC371, #0fe6e6, #7FFF00); 
-  background-size: 400% 400%; 
-  animation: gradient 8s ease infinite; 
-  color: #FFFFFF; 
-  margin: 15% auto; 
-  padding: 20px;
-  border: 1px solid #FFC371; 
-  max-width: 600px;
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  text-align: center; 
+  background: linear-gradient(135deg, #34e89e, #0f3443, #ff5f6d, #ffc371); /* Gradient renkler */
+  background-size: 300% 300%; 
+  animation: gradient-about 10s ease infinite; /* Dinamik renk geçişi */
+  color: #ffffff; /* Beyaz yazı */
+  margin: 10% auto; 
+  padding: 30px; 
+  border: 2px solid #34e89e; /* Yeşil kenarlık */
+  max-width: 700px; 
+  border-radius: 20px; /* Daha yuvarlak köşeler */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(52, 232, 158, 0.8); /* Canlı gölge efekti */
+  text-align: center; /* Ortalanmış içerik */
+  position: relative; 
+  overflow: hidden; 
 }
 
-@keyframes gradient {
+/* Başlık stili */
+.modal-content h2 {
+  color: #FFD700; /* Altın rengi başlık */
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+
+/* İçerik metni */
+.modal-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 15px;
+  text-align: justify; /* Daha düzenli görünüm */
+}
+
+/* Kenar süsü efekti */
+.modal-content::before,
+.modal-content::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  animation: spin-about 8s linear infinite;
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.modal-content::after {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  animation-duration: 12s; /* Daha yavaş dönüş */
+}
+
+/* Kapama butonu */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #FFD700; /* Altın renkli çarpı */
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+/* Gradient geçiş animasyonu */
+@keyframes gradient-about {
   0% {
     background-position: 0% 50%;
   }
@@ -484,22 +536,17 @@ body {
   }
 }
 
-.modal-content h2 {
-  color: #FFC371; 
+
+@keyframes spin-about {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.close {
-  color: #FFC371; 
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
 
-.close:hover,
-.close:focus {
-  color: #FFFFFF; 
-}
 
 
 
@@ -554,65 +601,96 @@ body {
   }
 }
 
-.modal {
-display: none; 
-position: fixed; 
-z-index: 1000; 
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.8);
+.modal-community {
+  background: linear-gradient(45deg, #34e89e, #0f3443, #ff5f6d, #ffc371);
+  background-size: 200% 200%;
+  animation: gradient-community 10s ease infinite; 
+  margin: 10% auto; 
+  padding: 30px; 
+  border: 2px solid #34e89e; 
+  max-width: 700px; 
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(52, 232, 158, 0.8);
+  text-align: center;
+  position: relative;
+  overflow: auto; 
 }
-/* Modal  */
-.modal-content {
-background: linear-gradient(135deg, #FF5F6D, #FFC371, #0fe6e6, #7FFF00); 
-background-size: 400% 400%; 
-animation: gradient 8s ease infinite; 
-color: #FFFFFF; 
-margin: 15% auto;
-padding: 20px;
-border: 1px solid #FFC371; 
-width: 80%;
-max-width: 600px;
-border-radius: 10px; 
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-text-align: center; /* Yazıyı ortala */
-font-family: 'Courier New', Courier, monospace; 
-animation: textFlow 6s ease-in-out infinite; 
+
+.modal-community h2 {
+  color: #ffd700; 
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px;
 }
-@keyframes gradient {
-0% {
-  background-position: 0% 50%;
+
+/* İçerik metni */
+.modal-community p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #e0e0e0;
 }
-50% {
-  background-position: 100% 50%;
+
+.modal-community::before,
+.modal-community::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  animation: spin-community 8s linear infinite;
+  transform-origin: center;
+  pointer-events: none;
 }
-100% {
-  background-position: 0% 50%;
+
+.modal-community::after {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  animation-duration: 12s; /* Daha yavaş dönme efekti */
 }
+
+.community-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #ffd700;
+  font-size: 20px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.community-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+@keyframes gradient-community {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
+@keyframes spin-community {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-.modal-content h2 {
-color: #FFC371; 
-font-size: 2.5em; 
-font-weight: bold; 
-text-transform: uppercase; 
-animation: textFlow 4s ease-in-out infinite; 
-}
-.close {
-color: #FFC371; 
-float: right;
-font-size: 28px;
-font-weight: bold;
-cursor: pointer;
-}
-.close:hover,
-.close:focus {
-color: #FFFFFF; 
-}
+
 
 .contract-address-container {
   display: flex;
@@ -643,4 +721,179 @@ color: #FFFFFF;
 
 .copy-button:hover {
   background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+.reward {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #4caf50, #388e3c); /* Clover yeşili */
+  border-radius: 50%; /* Daire formu */
+  box-shadow: 0 0 20px #4caf50, 0 0 50px #2e7d32; /* Parlayan efekt */
+  animation: spin 4s linear infinite, blink 1.5s alternate infinite;
+}
+
+.reward::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #81c784, #4caf50);
+  border-radius: 50%;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reward::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #81c784, #4caf50);
+  border-radius: 50%;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rewardclose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #f44336; /* Kırmızı çarpı */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 20px #4caf50, 0 0 50px #2e7d32;
+  }
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 10px #81c784, 0 0 20px #388e3c;
+  }
+}
+
+
+
+
+
+.modal-reward {
+  background: linear-gradient(45deg, #34e89e, #0f3443, #ff5f6d, #ffc371);
+  background-size: 200% 200%;
+  animation: gradient-reward 10s ease infinite; /* Daha yavaş geçiş animasyonu */
+  color: #f8f8f8; /* Yumuşak beyaz yazı */
+  margin: 10% auto; /* Daha düşük üst marj */
+  padding: 30px; /* İçerik boşluğu artırıldı */
+  border: 2px solid #34e89e; /* Yeşil kenar çizgisi */
+  max-width: 500px; /* Maksimum genişlik biraz daraltıldı */
+  border-radius: 20px; /* Daha yuvarlak köşeler */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(52, 232, 158, 0.8); /* Daha dramatik gölge efekti */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* İç başlıklar */
+.modal-reward h2 {
+  color: #ffd700; /* Altın rengi başlık */
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px;
+}
+
+/* İçerik metni */
+.modal-reward p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+/* Kenar süsü efekti */
+.modal-reward::before,
+.modal-reward::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  animation: spin-reward 8s linear infinite;
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.modal-reward::after {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  animation-duration: 12s; /* Daha yavaş dönme efekti */
+}
+
+/* Kapama butonu */
+.rewardclose {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #ffd700; /* Altın renkli çarpı */
+  font-size: 20px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.rewardclose:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Gradient geçiş animasyonu */
+@keyframes gradient-reward {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Kenar süsü animasyonu */
+@keyframes spin-reward {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
