@@ -104,12 +104,12 @@ Don’t just watch the future happen. Be part of it. Let’s make SpinCoin a nam
       Transparency and fairness are at the heart of SpinCoin’s tokenomics. Here’s how we’re setting the stage for long-term success:
     </p>
     <p><b>Total Supply:</b> 1,000,000,000 SPN</p>
-    <p><b>Liquidity:</b> 50% locked in decentralized exchanges for market stability.</p>
-    <p><b>Development Fund:</b> 10% allocated for future features and innovations.</p>
-    <p><b>Rewards:</b> Coming soon, designed to engage and reward the community!</p>
+    <p><b>Liquidity:</b> Liquidity: 50% will be allocated for initial liquidity on decentralized platforms via Pump.fun, ensuring market stability and accessibility. 🚀</p>
+    <p><b>Development Fund:</b>  10% reserved for future features and innovative upgrades that will continually improve the ecosystem.</p>
+    <p><b>Rewards:</b> Exciting reward mechanisms are in development and will be revealed soon to engage and benefit our community!</p>
     <p><b>Contract Address:</b></p>
     <div className="contract-address-container">
-      <span id="contractAddress">0x12..</span>
+      <span id="contractAddress">notyet</span>
       <button 
         className="copy-button" 
         onClick={() => navigator.clipboard.writeText('0x1234567890abcdef1234567890abcdef12345678')}
