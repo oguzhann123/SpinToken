@@ -24,6 +24,23 @@ const closecloseModal = () => {
   const modal = document.getElementById("Tokenomicsabout");
   modal.style.display = "none"; // Hide modal
 };
+
+
+
+const openRewardsModel = () => {
+  const modal = document.getElementById("Rewardsabout");
+  modal.style.display = "block"; // Show modal
+};
+// Close modal function
+const closeRewardsModal = () => {
+  const modal = document.getElementById("Rewardsabout");
+  modal.style.display = "none"; // Hide modal
+};
+
+
+
+
+
 // Generate random falling pixels
 const createPixels = (numPixels) => {
   const colors = [
@@ -61,6 +78,8 @@ function App() {
           </button>
           <span className='about' onClick={openModal}>Community</span>
           <span className='about' onClick={openTokenModel}>Tokenomics </span>
+          <span className='about' onClick={openRewardsModel}>Rewards </span>
+
 
         </div>
       </nav>
@@ -95,18 +114,40 @@ Don’t just watch the future happen. Be part of it. Let’s make SpinCoin a nam
 
 
 
+      <div className="modal" id="Rewardsabout">
+  <div className="modal-reward">
+    <span className="close" onClick={() => closeRewardsModal('Rewardsabout')}>&times;</span>
+    <h2>Rewards</h2>
+    <p>
+    <p><b>🪙:</b> Represents coins or currency, often symbolizing cryptocurrencies like SpinCoin.</p>
+<p><b>🔥:</b> Token burn, a mechanism to reduce supply.</p>
+<p><b>💩:</b> Indicates a funny or unpleasant surprise.</p>
+<p><b>🚀:</b> Represents a price surge, "to the moon" growth.</p>
+<p><b>💎:</b> Diamond hands, holding onto assets without selling.</p>
+<p><b>💵:</b> Represents profit or monetary gain.</p>
+<p><b>🍀:</b> Symbolizes luck and success.</p>
+<p><b>☠️:</b> Indicates loss, risk, or a fatal mistake.</p>
+<p><b>??:</b> Represents the unknown or a surprise element.</p>
 
-      <div className="modal" id="Tokenomicsabout">
+    </p>
+    <p>
+      <b>Big Clover:</b> 1000$
+    </p>
+  </div>
+</div>
+
+
+<div className="modal" id="Tokenomicsabout">
   <div className="modal-content">
     <span className="close" onClick={() => closecloseModal('Tokenomicsabout')}>&times;</span>
     <h2>Tokenomics</h2>
     <p>
       Transparency and fairness are at the heart of SpinCoin’s tokenomics. Here’s how we’re setting the stage for long-term success:
     </p>
-    <p><b>Total Supply:</b> 2,000,000,000 SPN</p>
-    <p><b>Liquidity:</b> Liquidity: Will be allocated to ensure market stability and support the growth of the SpinCoin ecosystem. We’re building a strong foundation for fostering trust and long-term value for all SpinCoin holders.</p>
-    <p><b>Development Fund:</b> 10% reserved for future features and innovative upgrades that will continually improve the ecosystem.</p>
-    <p><b>Rewards:</b> Exciting reward mechanisms are in development and will be revealed soon to engage and benefit our community!</p>
+    <p><b>Total Supply:</b> 1,000,000,000 SPN</p>
+    <p><b>Liquidity:</b> 50% locked in decentralized exchanges for market stability.</p>
+    <p><b>Development Fund:</b> 10% allocated for future features and innovations.</p>
+    <p><b>Rewards:</b> Coming soon, designed to engage and reward the community!</p>
     <p><b>Contract Address:</b></p>
     <div className="contract-address-container">
       <span id="contractAddress">0x12..</span>
@@ -119,7 +160,6 @@ Don’t just watch the future happen. Be part of it. Let’s make SpinCoin a nam
     </div>
   </div>
 </div>
-
 
 
 
