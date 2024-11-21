@@ -145,9 +145,9 @@ Don’t just watch the future happen. Be part of it. Let’s make SpinCoin a nam
       Transparency and fairness are at the heart of SpinCoin’s tokenomics. Here’s how we’re setting the stage for long-term success:
     </p>
     <p><b>Total Supply:</b> 1,000,000,000 SPN</p>
-    <p><b>Liquidity:</b> 50% locked in decentralized exchanges for market stability.</p>
-    <p><b>Development Fund:</b> 10% allocated for future features and innovations.</p>
-    <p><b>Rewards:</b> Coming soon, designed to engage and reward the community!</p>
+    <p><b>Liquidity:</b>Will be allocated to ensure market stability and support the growth of the SpinCoin ecosystem.</p>
+    <p><b>Development Fund:</b> 5% of the total supply is reserved to support continuous innovation, future features, and improvements to enhance the SpinCoin ecosystem.</p>
+    <p><b>Rewards:</b> Engaging community rewards are in the pipeline, designed to incentivize long-term participation and loyalty.</p>
     <p><b>Contract Address:</b></p>
     <div className="contract-address-container">
       <span id="contractAddress">0x12..</span>
