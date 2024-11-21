@@ -173,6 +173,9 @@ Don’t just watch the future happen. Be part of it. Let’s make SpinCoin a nam
         <a href="https://dexscreener.com/" target="_blank" rel="noopener noreferrer">
           <img src="/logo/dex.png" alt="DexScanner" className="social-logo" />
         </a>
+        <a href="https://t.me/SpinCoinSPN" target="_blank" rel="noopener noreferrer">
+          <img src="/logo/telegram.png" alt="Telegram" className="social-logo" />
+        </a>
       </div>
     </div>
   );
