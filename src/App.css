@@ -592,28 +592,9 @@ animation: textFlow 6s ease-in-out infinite;
   background-position: 0% 50%;
 }
 }
-@keyframes textFlow {
-0% {
-  color: #efefef;
-  text-shadow: 0 0 10px rgba(255, 95, 109, 0.8);
-}
-25% {
-  color: #FFC371;
-  text-shadow: 0 0 10px rgba(255, 195, 113, 0.8);
-}
-50% {
-  color: #0fe6e6;
-  text-shadow: 0 0 10px rgba(15, 230, 230, 0.8);
-}
-75% {
-  color: #7FFF00;
-  text-shadow: 0 0 10px rgba(127, 255, 0, 0.8);
-}
-100% {
-  color: #050505;
-  text-shadow: 0 0 10px rgba(255, 95, 109, 0.8);
-}
-}
+
+
+
 .modal-content h2 {
 color: #FFC371; 
 font-size: 2.5em; 
@@ -631,4 +612,35 @@ cursor: pointer;
 .close:hover,
 .close:focus {
 color: #FFFFFF; 
+}
+
+.contract-address-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.contract-address-container #contractAddress {
+  font-family: monospace;
+  background: #f4f4f4;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.copy-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: #0056b3;
 }
