@@ -73,7 +73,7 @@ function App() {
           <span className='span'>$SpinCoin</span>
         </div>
         <div className="nav-right">
-          <button className="buy-button" onClick={() => window.location.href = 'https://pump.fun/board'}>
+          <button className="buy-button" onClick={() => window.location.href = 'https://pump.fun/coin/3oW237FZF4RMcU1VqvVXCWdZVjDmwM8PFAgRdDPBpump'}>
             Buy
           </button>
           <span className='about' onClick={openModal}>Community</span>
